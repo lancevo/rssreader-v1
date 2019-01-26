@@ -1,10 +1,10 @@
 {
-  "name": "google-feeds-replacement",
+  "name": "rssreader",
   "version": "1.0.0",
-  "description": "Hosted google-feeds-replacement, drop in",
+  "description": "rss reader",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony-async-await ./index.js",
+    "start": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
