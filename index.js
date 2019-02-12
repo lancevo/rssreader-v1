@@ -12,7 +12,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/feed', async function(req, res) {
+const getUnixTime = dt => Math.floor(new Date(dt).getTime() / 1000);
+
+app.post('/rssreader', async function(req, res) {
   const url = req.body.url;
   try {
     const data = await new Feed(url).fetch();
@@ -26,7 +28,7 @@ app.post('/feed', async function(req, res) {
             permalinkUrl: r.link,
             categories: r.categories,
             url: url,
-            published: r.pubDate,
+            published: getUnixTime(r.pubDate),
             content: r.description,
             summary: r.summary
           };

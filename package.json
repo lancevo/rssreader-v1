@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pm2": "pm2 start rssreader-v1 --merge-logs --log-date-format=\"YYYY-MM-DD HH:mm:ss\" "
   },
   "repository": {
     "type": "git",
